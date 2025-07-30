@@ -1,0 +1,47 @@
+/* App.css */
+.appWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: "Segoe UI", sans-serif;
+  color: rgb(27, 21, 21);
+  padding: 1rem; /* Add padding around the entire app */
+  box-sizing: border-box;
+}
+
+/* Global gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional: spacing for main content area */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  margin-left: 250px; /* for large screens where sidebar is vertical */
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .appWrapper {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 60px; /* height of top navbar */
+    padding: 1rem;
+  }
+}

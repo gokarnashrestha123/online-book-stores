@@ -1,0 +1,147 @@
+.loginSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f4f0ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imageSide {
+  flex: 1;
+  background: #efe6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loginImg {
+  max-width: 100%;
+  height: auto;
+}
+
+.formSide {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #5e3c84;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+.input:focus {
+  border-color: #7e57c2;
+  outline: none;
+}
+
+.submitBtn {
+  padding: 0.8rem;
+  background-color: #6a1b9a;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #4a148c;
+}
+
+.bottomText {
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+.switchLink {
+  color: #6a1b9a;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.switchLink:hover {
+  text-decoration: underline;
+}
+
+.linkText {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imageSide {
+    padding: 1rem;
+  }
+
+  .formSide {
+    padding: 2rem 1rem;
+  }
+}

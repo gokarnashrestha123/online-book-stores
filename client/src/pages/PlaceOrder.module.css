@@ -1,0 +1,115 @@
+.placeOrderSection {
+  padding: 2rem;
+  background-color: #fdfcfe;
+  min-height: 100vh;
+}
+
+.form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.left,
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.nameRow,
+.cityRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.input:focus {
+  border-color: #9c27b0;
+  outline: none;
+}
+
+.paymentTitle {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.paymentTitle span {
+  color: #9c27b0;
+}
+
+.paymentMethods {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.methodCard {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.methodCard:hover {
+  border-color: #9c27b0;
+  background-color: #f3e5f5;
+}
+
+.active {
+  border-color: #9c27b0;
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.buttonWrap {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submitBtn {
+  padding: 0.8rem 2rem;
+  background-color: #6a1b9a;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: #4a148c;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .nameRow,
+  .cityRow {
+    flex-direction: column;
+  }
+}

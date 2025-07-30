@@ -1,0 +1,46 @@
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.orderCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.orderCol {
+  flex: 1;
+  padding: 10px;
+}
+
+.orderCol img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.orderItems p {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.orderDetails p,
+.orderSummary p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}

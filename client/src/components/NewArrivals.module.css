@@ -1,0 +1,39 @@
+.section {
+  padding: 2rem 1rem;
+  background-color: #f9f9fb;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.titleContainer {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.swiper {
+  padding-bottom: 2.5rem; /* space for pagination dots */
+}
+
+.swiper-pagination-bullet {
+  background-color: #9c7aea; /* purple-ish */
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #6f42c1;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 1.5rem 0.5rem;
+  }
+}

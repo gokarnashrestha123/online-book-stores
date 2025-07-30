@@ -1,0 +1,141 @@
+.section {
+  padding: 2rem 1rem;
+  background-color: #f9f4ff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Container: two-column layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Left column for features */
+.left {
+  flex: 1 1 55%;
+}
+
+/* Right column for image */
+.right {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/* Floating image animation */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Features list styling */
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.featureItem {
+  display: flex;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.icon {
+  font-size: 2rem;
+  color: #7c3aed;
+  flex-shrink: 0;
+}
+
+.text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.text p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .right {
+    animation: none;
+  }
+
+  .featureItem {
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+.right {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+.image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+/* Zoom on hover */
+.image:hover {
+  transform: scale(1.08);
+}
+
+/* Floating animation (keep this) */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

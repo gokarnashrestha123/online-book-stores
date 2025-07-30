@@ -1,0 +1,58 @@
+.fullWidthSection {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #f3e9ff;
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cartTotalContainer {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+
+.totalRow h5 {
+  font-weight: 500;
+  color: #3f226e;
+}
+
+.amount {
+  font-weight: bold;
+  color: #1d1b31;
+  transition: color 0.3s;
+}
+
+.finalTotal {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #522f90;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 1rem 0;
+}

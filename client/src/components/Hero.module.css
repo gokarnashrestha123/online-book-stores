@@ -1,0 +1,148 @@
+.hero {
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.left {
+  flex: 1 1 500px;
+}
+
+.right {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.pencil {
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+
+.paragraph {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.btnContainer {
+  margin-top: 2rem;
+}
+
+.exploreBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.exploreBtn:hover {
+  background-color: #0056b3;
+}
+
+.bgImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+  }
+}
+/* Add to the bottom of Hero.module.css */
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    color: #007bff;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    color: #3399ff;
+    text-shadow: 0 0 12px rgba(0, 123, 255, 0.8);
+  }
+  100% {
+    color: #007bff;
+    text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}
+
+.bounceB {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.highlightAnimated {
+  animation: fadeInSlide 1s ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  display: inline-block;
+  font-weight: 700;
+  color: #007bff;
+  animation-name: glow, fadeInSlide;
+  animation-duration: 3s, 1s;
+  animation-iteration-count: infinite, 1;
+  animation-timing-function: ease-in-out;
+}

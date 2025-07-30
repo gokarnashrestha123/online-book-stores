@@ -1,0 +1,143 @@
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px) scale(var(--hover-scale, 1));
+  }
+  50% {
+    transform: translateY(-6px) scale(var(--hover-scale, 1));
+  }
+  100% {
+    transform: translateY(0px) scale(var(--hover-scale, 1));
+  }
+}
+
+.card {
+  --hover-scale: 1;
+  background: linear-gradient(135deg, #5e3c84, #3d2b56);
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(94, 60, 132, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.05);
+  padding: 0.6rem;
+  transition: box-shadow 0.3s ease;
+  animation: fadeSlideUp 0.4s ease forwards, floatUpDown 4s ease-in-out infinite;
+  transform: scale(var(--hover-scale));
+  opacity: 0;
+  color: #f0eaff;
+  width: 200px;
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  will-change: transform;
+}
+
+.card:hover {
+  --hover-scale: 1.07;
+  z-index: 2;
+  box-shadow: 0 16px 32px rgba(94, 60, 132, 0.5);
+}
+
+/* Image Container */
+.imageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+/* Book Image */
+.bookImage {
+  max-width: 100%;
+  max-height: 90px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #2f2044;
+}
+
+/* Content Block */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+/* Top row */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Book Title */
+.title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Icon (e.g. add to cart) */
+.icon {
+  font-size: 1.2rem;
+  color: #c09aff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #d8b4fe;
+}
+
+/* Meta info */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Price */
+.price {
+  font-size: 0.85rem;
+  color: #b48efc;
+  font-weight: bold;
+}
+
+/* Description */
+.description {
+  font-size: 0.72rem;
+  line-height: 1.25;
+  color: #e1d6ff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 0;
+  padding: 0;
+}
+.bookImage {
+  max-width: 100%;
+  max-height: 90px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: #2f2044;
+  transition: transform 0.3s ease-in-out; /* ✅ add smooth zoom */
+}
+
+.card:hover .bookImage {
+  transform: scale(1.1); /* ✅ zoom image on card hover */
+}

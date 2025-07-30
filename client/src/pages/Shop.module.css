@@ -1,0 +1,140 @@
+.shopSection {
+  padding: 2rem;
+  background-color: #f5f3ff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.4rem 0.6rem;
+  background: transparent;
+}
+
+.icon {
+  font-size: 1.2rem;
+  color: #6b21a8;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.categoryItem {
+  cursor: pointer;
+}
+
+.categoryCard {
+  text-align: center;
+  padding: 0.8rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-color: #ede9fe;
+  transition: transform 0.2s, border 0.2s;
+}
+
+.categoryCard img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.categoryCard span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #5b21b6;
+}
+
+.categoryCard:hover {
+  transform: scale(1.05);
+}
+
+.selected {
+  border-color: #7c3aed;
+  background-color: #ddd6fe;
+}
+
+.sortBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sortSelect {
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.bookGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.noBooks {
+  text-align: center;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.pagination button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #ede9fe;
+  color: #4c1d95;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #c4b5fd;
+}
+
+.pagination button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.activePage {
+  background-color: #7c3aed !important;
+  color: white;
+}
